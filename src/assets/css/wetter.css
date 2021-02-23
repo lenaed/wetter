@@ -1,0 +1,70 @@
+.sommer {
+	background-image: url("../sommer.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.winter {
+	background-image: url("../winter.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+form {
+	text-align: center;
+}
+input.city {
+	width: auto;
+	max-width: 200px;
+	color: #282c34;
+	border-color: 1px solid #ccc;
+}
+button {
+	background-color: cornflowerblue;
+	border: none;
+	border-radius: 5px;
+	margin-left: 5px;
+	color: #fff;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+input.city, button {
+	font-size: 20px;
+}
+.result {
+	text-align: center;
+}
+.temp {
+	margin: auto;
+	margin-top: 20px;
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	opacity: 0.7;
+	border-radius: 30px;
+	text-align: center;
+	line-height: 1.6;
+}
+.temp span {
+	font-size: 60px;
+	font-weight: 900;
+	text-shadow: 5px 5px 5px #666;
+}
+.description {
+	font-size: 30px;
+	font-weight: 900;
+	margin: 20px;
+	color: white;
+	text-shadow: 2px 2px 2px #006;
+}
+.sun span {
+	font-size: 20px;
+	font-weight: bold;
+	color: #006;
+}
+.sunrise {
+	color: #ff0;
+}
+.sunset {
+	color: #c00;
+}
