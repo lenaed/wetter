@@ -20,21 +20,16 @@ class Wetter extends Component {
         axios
             .get(url)
             .then(res => {
-                if(parseInt(res.data.cod) === 200) {
-                    this.setState({weather: res.data, error: null})
-                    let temp = this.state.weather.main.temp;
-                    let container = document.querySelector('.container');
-
-                    if(temp >= 18) {
-                        container.className = "container sommer";
-                    } else {
-                        container.className = "container winter";
-                    }
-                }
+                // @todos:
+                // - check response code 200
+                // - set states (setState) for weather, error
+                // - get temparatur
+                // - set container classes for summer if temperatur >= 18 or winter if lower
             })
             .catch(err => {
                 if(err.response) {
-                    this.setState({weather: null, error: err.response.data.message})
+                    // @todo:
+                    // - set setState for error (err.response.data)
                 }
             });
     }
@@ -62,10 +57,11 @@ function WeatherData(props) {
         )
     }
     else if(w !== null) {
-        let temp = parseInt(w.main.temp);
-        let description = w.weather[0].description;
-        let sunrise = new Date(w.sys.sunrise * 1000).toLocaleTimeString();
-        let sunset =  new Date(w.sys.sunset * 1000).toLocaleTimeString();
+        let temp        = null,
+            description = null,
+            sunrise     = null,
+            sunset      = null;
+
         return (<div className="result">
             <div className="temp">
                 <span>{temp} °C</span>
