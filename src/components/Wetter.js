@@ -12,7 +12,7 @@ class Wetter extends Component {
     }
     onSumit = (e) => {
         e.preventDefault();
-        let city = document.getElementById("city").value;
+        let city = null;
         this.getWeather(city);
     }
     getWeather(city) {
