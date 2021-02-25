@@ -15,7 +15,7 @@ class Wetter extends Component {
         let city = document.getElementById('city').value;
         if( "" !== city ) {
             this.getWeather(city);
-        }g
+        }
     }
     getWeather(city) {
         const url = API_URL + "?q=" + city + ",de&lang=de&units=metric&APPID=" + API_KEY;
